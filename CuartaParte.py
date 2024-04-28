@@ -118,7 +118,7 @@ def check(w1:str, w2:str):
     # Creo un diccionario con letras y cantidad de veces que aparece.
     word_dict = dict()
     for word in w2:
-        word_dict[word] = word_dict.get(word, 0) +1 ##Ese 0 le da un valor por defecto inicial.
+        word_dict[word] = word_dict.get(word, 0) +1 ##Ese 0 le da un valor por defecto inicial.q
 
     # Compruebo con un bucle si es un isograma.
     isogram = True
