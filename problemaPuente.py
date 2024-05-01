@@ -10,6 +10,16 @@ Problema del puente
         Adolescente = 1 minutos
     Crea un programa para ir eligiendo el orden para ir a cruzar.
 """
+class colors:
+    RESET = '\033[0m'
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+
+class InvalidIndex(Exception):
+    pass
+
 # Diccionario con los protragonistas
 users = {
     "Elder" : [8, "A"], 
@@ -17,9 +27,6 @@ users = {
     "Young" : [2, "A"], 
     "Teenager" : [1, "A"]
 }
-
-class InvalidIndex(Exception):
-    pass
 
 # Variables inicializadas.
 max_time = 15 # Tiempo máximo para cruzar el puente.
@@ -37,7 +44,7 @@ def empty_side(users:dict):
 def show_side_A(users:dict):
     index = 1
     list_user_A = [] # Inicializamos una lista con la gente de este lado.
-    print("\n· Listado de gente en en lado A del puente:\n")
+    print(f"\n{colors.BLUE}· Listado de gente en el lado A del puente:{colors.RESET}\n")
     for user, data in users.items():
         if "A" in data[1]:
             print(f"\t{index} - {user} --> tiempo: {data[0]} minutos")
@@ -49,7 +56,7 @@ def show_side_A(users:dict):
 def show_side_B(users:dict):
     index = 1
     list_user_B = [] # Inicializamos una lista con la gente de este lado.
-    print("\n· Listado de gente en en lado B del puente:\n")
+    print(f"\n{colors.BLUE}· Listado de gente en el lado B del puente:\n{colors.RESET}")
     for user, data in users.items():
         if "B" in data[1]:
             print(f"\t{index} - {user} --> tiempo: {data[0]} minutos")
@@ -59,7 +66,7 @@ def show_side_B(users:dict):
 
 # Función para hacer la selección de quien cruzará.
 def select_side_A(side_A: list):
-    print("\n Seleccione con los índices quien quieres que cruce.\n")
+    print(F"{colors.BLUE}\n Seleccione con los índices quien quieres que cruce del lado A.{colors.RESET}\n")
     while True:
         try:
             user_1 = int(input("\tUsuario 1: "))
@@ -69,17 +76,16 @@ def select_side_A(side_A: list):
                 user_2 = 1                              # inicializamos user_2 a 1.
                 break
             if user_1 == user_2:
-                print("\nERROR. No puese seleccionar a la misma persona.\n")
+                print(f"{colors.RED}\nERROR. No puese seleccionar a la misma persona.{colors.RESET}\n")
             elif (0 <= (user_1-1) < len(side_A)) and (0 <= (user_2-1) < len(side_A)):
                 break       
             else:
                 raise InvalidIndex
         except InvalidIndex:
-            print("\nERROR. Seleccione sobre el indice indicado.\n")
+            print(f"\n{colors.RED}ERROR. Seleccione sobre el indice indicado.{colors.RESET}\n")
         except:
-            print("\nERROR. Seleccione sobre el indice indicado.\n")
+            print(f"{colors.RED}\nERROR. Seleccione sobre el indice indicado.{colors.RESET}\n")
     return (user_1-1), (user_2-1)
-
 
 # Función donde le pasa el diccionario y la lista generada con una lista de cada posición del diccionario seleccionada
 # Con esos datos y sabiendo el indice de la lista que seleccionó el usuario, cambiamos el valor correspondiente del diccionario
@@ -100,8 +106,8 @@ def save_changes_side_A(side_A:list, users:dict, max_time:int):
 
 # Función para hacer la selección de quien cruzará.
 def select_side_B(max_time:int ,side_B: list):
-    print(f"\n· Tiempo restante para cruzar el puente: {max_time} minutos.")
-    print("\n Seleccione el índice que quieres que cruce de vuelta.\n")
+    print(f"\n· Tiempo restante para cruzar el puente: {colors.RED}{max_time} minutos.{colors.RESET}")
+    print(f"\n{colors.BLUE} Seleccione el índice que quieres que cruce de vuelta del lado B.{colors.RESET}\n")
     while True:
         try:
             user_1 = int(input("\tUsuario: "))
@@ -110,9 +116,9 @@ def select_side_B(max_time:int ,side_B: list):
             else:
                 raise InvalidIndex
         except InvalidIndex:
-            print("\nERROR. Seleccione sobre el indice indicado.\n")
+            print(f"\n{colors.RED}ERROR. Seleccione sobre el indice indicado.{colors.RESET}\n")
         except:
-            print("\nERROR. Seleccione sobre el indice indicado.\n")
+            print(f"\n{colors.RED}ERROR. Seleccione sobre el indice indicado.{colors.RESET}\n")
     return (user_1-1)
 
 # Función donde le pasa el diccionario y la lista generada con una lista de cada posición del diccionario seleccionada
@@ -138,14 +144,14 @@ def main(max_time):
     side_A = []
     side_B = []
 
-    print("\n\t ***************************")
+    print(f"{colors.BLUE}\n\t ***************************")
     print("\t *   PROBLEMA DEL PUENTE   *")
-    print("\t ***************************")
+    print(f"\t ***************************{colors.RESET}")
 
     while max_time > 0:
         side_A_validator, side_B_validator = empty_side(users) # Comprobamos que lados tienen gente.
 
-        print(f"\n· Tiempo restante para cruzar el puente: {max_time} minutos.") # Mostramos el tiempo que nos queda para cruzar
+        print(f"\n· Tiempo restante para cruzar el puente: {colors.RED}{max_time} minutos.{colors.RESET}") # Mostramos el tiempo que nos queda para cruzar
 
         if side_A_validator: # Si encuentra gente en el lado A, imprime listado.
             side_A = show_side_A(users) # Mostramos el listado de la gente en el lado A.
@@ -160,11 +166,12 @@ def main(max_time):
             max_time, side_A_validator, side_B_validator = save_changes_side_B(side_B, users, max_time)
 
         if not side_A_validator and max_time >=0:
-            print("\nGENIAL!! Lo has conseguido! ESTÁIS A SALVO!!!!\n")
+            print(f"\n{colors.GREEN}GENIAL!! Lo has conseguido! ESTÁIS A SALVO!!!!{colors.RESET}\n")
             break
     
     else:
-        print("\nGAME OVER. Se ha acabado el tiempo sin que todos hayan cruzado.\n")
-        print(f"\t· Tiempo agotado!!!! \n")
+        print(f"\n{colors.RED}GAME OVER. Se ha acabado el tiempo sin que todos hayan cruzado.{colors.RESET}\n")
+        print(f"\t{colors.RED}· Tiempo agotado!!!! {colors.RESET}\n")
+
 
 main(max_time)
