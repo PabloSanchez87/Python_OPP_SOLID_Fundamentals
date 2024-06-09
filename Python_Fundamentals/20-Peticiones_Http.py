@@ -160,6 +160,7 @@ def get_pokemon():
     if list_versions:
         print_versions(list_versions)
 
+# Bucle principal.
 def loop_execute(get_pokemon):
     while True:
         get_pokemon()
@@ -169,9 +170,7 @@ def loop_execute(get_pokemon):
             break  # Sale del bucle while y termina el programa.
         print()
         os.system('clear')
-        
-
-        
+ 
 
 # Llama a la función principal para comenzar el proceso.
 loop_execute(get_pokemon)
