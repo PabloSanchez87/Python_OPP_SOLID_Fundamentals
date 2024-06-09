@@ -6,11 +6,15 @@
  * - NO hace falta comprobar que ambas palabras existan.
  * - Dos palabras exactamente iguales no son anagrama.
 """
+
+" Complidad temporal: 0(n log n) | Complejidad espacial: 0(n)" 
 # Usando sorted. Ordenamos y comparamos. Tmb comprobamos que no sean la misma palabra
 def anagram_sorted(w1:str, w2:str) -> bool:
     return (sorted(w1) == sorted(w2)) and (len(w1) == len(w2)) and (w1 != w2)
 
 
+
+" Complidad temporal: 0(n^2) | Complejidad espacial: 0(n)" 
 def anagram_with_lists(w1:str, w2:str) -> bool:
     if len(w1) != len(w2): # Comprobamos que tengan la misma longitud.
         return False
@@ -42,6 +46,7 @@ print(f'silent, listen --> {anagram_with_lists("silent", "listen")}')
 print(f'hola, hola --> {anagram_with_lists("hola", "hola")}')
 print(f'casa, cosa --> {anagram_with_lists("casa", "cosa")}')
 print(f'qwerty, qwert --> {anagram_with_lists("qwerty", "qwert")}')
+
 
 
 
