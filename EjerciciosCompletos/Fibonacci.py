@@ -94,7 +94,7 @@ print("-"*100)
 # Recursividad
 def fibonacci_recursivo(n, a=0, b=1):
     if n == 0:
-        return
+        return 
     print(a, end= " ")
     fibonacci_recursivo(n-1, b, a+b)
 
