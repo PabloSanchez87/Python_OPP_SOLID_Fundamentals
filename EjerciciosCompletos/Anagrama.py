@@ -38,6 +38,7 @@ print(f'silent, listen --> {anagram_sorted("silent", "listen")}')
 print(f'hola, hola --> {anagram_sorted("hola", "hola")}')
 print(f'casa, cosa --> {anagram_sorted("casa", "cosa")}')
 print(f'qwerty, qwert --> {anagram_sorted("qwerty", "qwert")}')
+print("-"*40)
 
 ### USANDO LISTAS.
 print("-> LIST")
@@ -47,6 +48,17 @@ print(f'hola, hola --> {anagram_with_lists("hola", "hola")}')
 print(f'casa, cosa --> {anagram_with_lists("casa", "cosa")}')
 print(f'qwerty, qwert --> {anagram_with_lists("qwerty", "qwert")}')
 
+print("-"*40)
+# Prueba para el usuario.
+while True:
+    w1 = input("Introduzca la primera palabra: ")
+    w2 = input("Introduzca la segunda palabra: ")
+    print(f"  · ¿Son anagrmas? {anagram_sorted(w1,w2)}")
+    control = input("¿Quieres introducir más palabras? (s/n): ").strip().lower()
+    if control != 's':
+        print("Adiós!")
+        break
+       
 
 
 
