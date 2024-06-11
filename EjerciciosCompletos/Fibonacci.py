@@ -5,6 +5,8 @@
  *   la que el siguiente siempre es la suma de los dos anteriores.
  *   0, 1, 1, 2, 3, 5, 8, 13...
 """
+import time
+
 # Partiendo de valores iniciales igual a 0.
 def fibonacci():
     f = 0
@@ -33,7 +35,10 @@ def fibonacci():
     print()
 
 print("VERSIÓN 1: ")
-fibonacci()
+start_time = time.time()
+fibonacci() # 447 steps - O(1) temporal - O(1) espacial
+end_time = time.time()
+print("\nTime:" , end_time-start_time)
 print("-"*100) 
 
 # Simplifico la primera versión
@@ -54,7 +59,10 @@ def fibonacci_v2():
     print()
 
 print("VERSIÓN 2: ")
-fibonacci_v2()
+start_time = time.time()
+fibonacci_v2() # 358 steps - O(1) temporal - O(1) espacial
+end_time = time.time()
+print("\nTime:" , end_time-start_time)
 print("-" * 100)
 
 
@@ -74,7 +82,10 @@ def fibonacci_v3():
     print() 
 
 print("VERSIÓN 3: ")
-fibonacci_v3()
+start_time = time.time()
+fibonacci_v3() # 210 steps - O(1) temporal - O(1) espacial
+end_time = time.time()
+print("\nTime:" , end_time-start_time)
 print("-"*100) 
 
 
@@ -87,7 +98,10 @@ def fibonacci_v4(n):
     return print(fibo)
 
 print("VERSIÓN 4: ")
-fibonacci_v4(50)
+start_time = time.time()
+fibonacci_v4(50) # 104 steps - O(n) temporal - O(n) espacial                                                       
+end_time = time.time()
+print("\nTime:" , end_time-start_time)
 print("-"*100)
 
 
@@ -99,9 +113,56 @@ def fibonacci_recursivo(n, a=0, b=1):
     fibonacci_recursivo(n-1, b, a+b)
 
 print("VERSIÓN RECURSIVA: ")
-fibonacci_recursivo(50)
+start_time = time.time()
+fibonacci_recursivo(50) 
+end_time = time.time()
 print()
+print("\nTime:" , end_time-start_time)
 print("-"*100)
+
+
+# Uso MEMOIZACIÓN
+# Téncica de optimización en la programacion en la cual se almacenan
+# en memoria los resultados de una función para evitar recalcularlos
+# en llamadas futuras con los mismo parámetros.
+# La memoización puede mejorar significativamente el rendimientos de
+# las funciones que realizan calculos costosos y repetitivos.
+
+# MEMOIZACIÓN - IMPLEMENTACIÓN EXPLICITA
+fibonacci_cache = {}
+def fibonacci_ca(indice):
+    # si tenemos el valor en cache lo devolvemos
+    if indice in fibonacci_cache:
+        return (fibonacci_cache[indice])
+    
+    if indice <= 1:
+        valor = indice
+    else:
+        valor = fibonacci_ca(indice-1)+ fibonacci_ca(indice-2)
+
+    # Guardar el valor en cache y devolverlo.
+    fibonacci_cache[indice] = valor
+    return valor
+
+for i in range(0,11):
+    print(fibonacci_ca(i), end=" ")
+print()
+
+
+# MEMOIZACIÓN - IMPLEMENTACIÓN IMPLICITA
+from functools import lru_cache
+
+@lru_cache(maxsize=100)
+def fibonacci_cache_implicito(indice):
+    
+    if indice <=1:
+        return indice
+    else: return fibonacci_cache_implicito(indice-1)+fibonacci_cache_implicito(indice-2)
+
+for i in range(0,11):
+    print(fibonacci_cache_implicito(i), end=" ")
+print()
+
 
 
 ## Prueba con YIELD
