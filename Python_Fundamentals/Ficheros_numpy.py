@@ -3,7 +3,7 @@ import numpy as np
 
 # Escribir con numpy.
 # Crear datos de ejemplo.
-data = np.array([[1,2,3],[4,5,6],[7,8,9]])
+data = np.array([[1,2,3],[4,5,6],[7,8,9]])   
 # Guardar datos en un archivo CSV
 np.savetxt("/home/pablost/Python_OPP_SOLID_Fundamentals/Python_Fundamentals/Ficheros/datos.csv", 
            data, delimiter=",")
