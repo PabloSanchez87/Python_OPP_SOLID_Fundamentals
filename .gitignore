@@ -1,1 +1,53 @@
 /Readme MARKDOWN Practice
+
+
+# Excluir la carpeta del entorno virtual
+vPython_practice/
+
+# Excluir carpetas __pycache__
+**/__pycache__/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Instaladores de pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos de configuración específicos del entorno
+.env
+.vscode/
+.idea/
+
+# Archivos del sistema y de edición
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
+MANIFEST
+
+# Pruebas / cobertura
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Sphinx documentación
+docs/_build/
+
+# PyBuilder
+target/
