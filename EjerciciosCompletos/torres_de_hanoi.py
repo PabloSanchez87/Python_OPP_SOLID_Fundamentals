@@ -49,7 +49,7 @@ def inicializar_torres(n):
     print(torres)
     return torres
 
-def hanoi(n, origen, destino, auxiliar):
+def hanoi(n, origen, auxiliar, destino):
     if n == 1:
         # Movimiento directo del disco de origen a destino
         destino.append(origen.pop())
@@ -58,13 +58,13 @@ def hanoi(n, origen, destino, auxiliar):
         return
     
     # Mover n-1 discos de origen a auxiliar usando destino como auxiliar
-    hanoi(n-1, origen, auxiliar, destino)
+    hanoi(n-1, origen, destino, auxiliar)
     # Mover el disco restante de origen a destino
     destino.append(origen.pop())
     # Imprimir estado actual de las torres
     print(torres)
     # Mover n-1 discos de auxiliar a destino usando origen como auxiliar
-    hanoi(n-1, auxiliar, destino, origen)
+    hanoi(n-1, auxiliar, origen, destino)
 
 
 while True:
@@ -75,7 +75,7 @@ while True:
             # Inicializar las torres según el número de discos
             torres = inicializar_torres(int(n))
             # Llamar a la función hanoi para resolver el problema
-            hanoi(int(n), torres[0], torres[2], torres[1])
+            hanoi(int(n), torres[0], torres[1], torres[2])
         else:
             break
     except ValueError:
