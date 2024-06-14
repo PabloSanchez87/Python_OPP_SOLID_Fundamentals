@@ -28,7 +28,6 @@ desde la torre A hasta la torre C.
 def mover_disco(desde, hacia, disco):
     print(f"Mover disco {disco} de la torre {desde} hacia la torre {hacia}")
     
-
 def torres_de_hanoi(n, origen, destino, auxiliar):
     # Caso base
     if n==1:
@@ -41,6 +40,7 @@ def torres_de_hanoi(n, origen, destino, auxiliar):
 torres_de_hanoi(3,"Origen", "Destino", "Auxiliar")
 """
 
+## Versión mejorada.
 def inicializar_torres(n):
     origen = list(range(n, 0, -1))          # Torre inicial con discos del 1 al n
     auxiliar = []                           # Torre auxiliar vacía
@@ -67,6 +67,8 @@ def hanoi(n, origen, auxiliar, destino):
     hanoi(n-1, auxiliar, origen, destino)
 
 
+
+## Ejecución principal.
 while True:
     try:
         # Obtener el número de discos
