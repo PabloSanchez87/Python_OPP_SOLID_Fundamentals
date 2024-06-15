@@ -1,3 +1,6 @@
+import time
+import os
+
 ### Problema de Resolución de Laberinto:
 """
 Imagina que eres parte de un equipo de desarrollo de IA que se encarga de
@@ -45,6 +48,10 @@ def resolver_laberinto(laberinto, fila, columna, camino=None):
     # Añadir la posición actual al camino.
     camino.append((fila, columna))
     
+    # Imprimir el laberinto actualizado.
+    imprimir_laberinto(laberinto, camino)
+    time.sleep(0.25)  # Añadir un retraso para la animación.
+    
     # Caso base: verificar si hemos llegado a la salida.
     if laberinto[fila][columna]==9:
         return camino
@@ -61,6 +68,9 @@ def resolver_laberinto(laberinto, fila, columna, camino=None):
     return None # Si ningún movimiento lleva a una solución, retornar None.
 
 def imprimir_laberinto(laberinto, camino):
+    # Limpiar la pantalla
+    os.system('cls' if os.name == 'nt' else 'clear') # nt -> Windows // posix -> linux/macOS
+    
     # Imprimir el laberinto con el camino encontrado marcado.
     for fila in range(len(laberinto)):
         for columna in range(len(laberinto[0])):
@@ -89,8 +99,10 @@ camino_solucion = resolver_laberinto(laberinto, 0,0)
 
 # Imprimir el resultado.
 if camino_solucion:
-    print("El camino para salir del laberinto es:")
     imprimir_laberinto(laberinto, camino_solucion)
+
+    
+if camino_solucion:
+    print("Hemos llegado!")
 else:
     print("No hay solucion para este laberinto.")
-    
