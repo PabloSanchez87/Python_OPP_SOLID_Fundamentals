@@ -63,11 +63,11 @@ print("·"*60)
 print(" · SIN MEMOIZACION · ")
 print(f"Coste sin memoizacion para la {destino_1} es de: {coste_sin_memoizacion_1}")
 print(f"Coste sin memoizacion para la {destino_2}  es de: {coste_sin_memoizacion_2}")
-print(f"    · Tiempo sin memoizacion: {tiempo_total_1:.3f} nanosegundos.")
+print(f"    · Tiempo sin memoizacion: {tiempo_total_1:.3f} microsegundos.")
 print("·"*60)
 print(" · CON MEMOIZACION ·")
 print(f"Coste con memoizacion para la {destino_1}  es de: {coste_con_memoizacion_1}")
 print(f"Coste con memoizacion para la {destino_2}  es de: {coste_con_memoizacion_2}")
-print(f"    · Tiempo con memoizacion: {tiempo_total_2:.3f} nanosegundos.")
+print(f"    · Tiempo con memoizacion: {tiempo_total_2:.3f} microsegundos.")
 
 
