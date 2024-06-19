@@ -74,7 +74,7 @@ print(persona1.presentarse())
 print(persona1.conducir())
 
 ## Ejemplo 3. Clases con composición
-print("\n Composición...")
+print("\nComposición...")
 
 class PersonaComposicion:
     def __init__(self, nombre, vehiculo, animal):
