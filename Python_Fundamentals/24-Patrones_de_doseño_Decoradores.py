@@ -55,7 +55,8 @@ print("·"*50)
 def call_counter(function):
     def counter_function():
         counter_function.call_count += 1
-        print(f"La función {function.__name__} se ha llamado {counter_function.call_count} vez(es).") 
+        print(
+            f"La función {function.__name__} se ha llamado {counter_function.call_count} vez(es).") 
         return function
     
     counter_function.call_count = 0   
