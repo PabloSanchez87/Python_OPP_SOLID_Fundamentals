@@ -1,6 +1,6 @@
 # 🐍 POO | SOLID | Python 🐍
 
-Este repositorio contiene una colección de ejercicios y proyectos de Python organizados en diferentes categorías. Cada sección aborda un aspecto específico del lenguaje Python, desde los fundamentos hasta principios avanzados de diseño de software.
+Este repositorio contiene una colección de ejercicios y proyectos de Python organizados en diferentes categorías. Cada sección aborda un aspecto específico de la Programación Orientada a Objetos y SOLID mediante el uso del lenguaje Python, desde los fundamentos hasta principios avanzados de diseño de software.
 
 # Contenidos del Repositorio
 ## POO (Programación Orientada a Objetos)
@@ -15,7 +15,7 @@ En esta sección, se exploran los conceptos fundamentales de la programación or
 
 ## Python Fundamentals
 
-![SOLID](resources/python_basics.webp)
+![Python_Fundamentals](resources/python_basics.webp)
 Esta sección cubre los fundamentos del lenguaje Python, ideal para principiantes y para repasar conceptos básicos.
 
 - **Operadores y Estructuras de Control**: Uso de operadores y estructuras de control como bucles y condicionales.
@@ -25,6 +25,17 @@ Esta sección cubre los fundamentos del lenguaje Python, ideal para principiante
 - **Manejo de Ficheros**: Lectura y escritura de archivos.
 - **JSON y XML**: Manipulación de datos en formatos JSON y XML.
 - **Pruebas Unitarias**: Creación de pruebas unitarias para asegurar la calidad del código.
+
+
+## POO (Programación Orientada a Objetos)
+![SOLID](resources/OOP.jpg)
+En esta sección, se exploran los conceptos fundamentales de la programación orientada a objetos en Python.
+
+- **Introducción a POO**: Conceptos básicos y ejemplos iniciales.
+- **Abstracción, Encapsulamiento, Herencia y Polimorfismo**: Ejemplos y ejercicios que ilustran estos principios de POO.
+- **Herencia vs Composición**: Comparación y uso adecuado de herencia y composición en diseño de software.
+
+[Gráfico Programación orientada a Objetos](https://www.xmind.app/embed/2SwRjm/)
 
 ## Principios SOLID
 ![SOLID](resources/solid.png)
@@ -37,7 +48,7 @@ Esta sección contiene ejemplos y ejercicios que ilustran los principios SOLID d
 - **Inversión de Dependencias (DIP)**: Ejercicios que muestran cómo depender de abstracciones en lugar de concreciones.
 
 ## Ejercicios Completos
-Esta carpeta contiene una variedad de ejercicios prácticos que cubren diferentes aspectos de Python, incluyendo decoradores, funciones lambda, memoización, y más.
+Esta carpeta contiene una variedad de ejercicios prácticos que cubren diferentes aspectos de Python, incluido la resolucoión de ejercicios típicos de pruebas técnicas.
 
 ## Cómo Empezar
 
