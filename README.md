@@ -3,16 +3,6 @@
 Este repositorio contiene una colección de ejercicios y proyectos de Python organizados en diferentes categorías. Cada sección aborda un aspecto específico de la Programación Orientada a Objetos y SOLID mediante el uso del lenguaje Python, desde los fundamentos hasta principios avanzados de diseño de software.
 
 # Contenidos del Repositorio
-## POO (Programación Orientada a Objetos)
-![SOLID](resources/OOP.jpg)
-En esta sección, se exploran los conceptos fundamentales de la programación orientada a objetos en Python.
-
-- **Introducción a POO**: Conceptos básicos y ejemplos iniciales.
-- **Abstracción, Encapsulamiento, Herencia y Polimorfismo**: Ejemplos y ejercicios que ilustran estos principios de POO.
-- **Herencia vs Composición**: Comparación y uso adecuado de herencia y composición en diseño de software.
-
-[Gráfico de los conceptos básicos OOP](https://xmind.app/embed/2SwRjm/)
-
 ## Python Fundamentals
 
 ![Python_Fundamentals](resources/python_basics.webp)
@@ -26,6 +16,15 @@ Esta sección cubre los fundamentos del lenguaje Python, ideal para principiante
 - **JSON y XML**: Manipulación de datos en formatos JSON y XML.
 - **Pruebas Unitarias**: Creación de pruebas unitarias para asegurar la calidad del código.
 
+## POO (Programación Orientada a Objetos)
+![SOLID](resources/OOP.jpg)
+En esta sección, se exploran los conceptos fundamentales de la programación orientada a objetos en Python.
+
+- **Introducción a POO**: Conceptos básicos y ejemplos iniciales.
+- **Abstracción, Encapsulamiento, Herencia y Polimorfismo**: Ejemplos y ejercicios que ilustran estos principios de POO.
+- **Herencia vs Composición**: Comparación y uso adecuado de herencia y composición en diseño de software.
+
+[Gráfico de los conceptos básicos OOP](https://xmind.app/embed/2SwRjm/)
 
 ## POO (Programación Orientada a Objetos)
 ![SOLID](resources/OOP.jpg)
