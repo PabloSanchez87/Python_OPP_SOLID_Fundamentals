@@ -11,7 +11,7 @@ En esta sección, se exploran los conceptos fundamentales de la programación or
 - **Abstracción, Encapsulamiento, Herencia y Polimorfismo**: Ejemplos y ejercicios que ilustran estos principios de POO.
 - **Herencia vs Composición**: Comparación y uso adecuado de herencia y composición en diseño de software.
 
-<iframe src='https://www.xmind.app/embed/2SwRjm/' width='750' height='557' frameborder='0' scrolling='no' allowfullscreen="true"></iframe>
+[Gráfico de los conceptos básicos OOP](https://xmind.app/embed/2SwRjm/)
 
 ## Python Fundamentals
 
