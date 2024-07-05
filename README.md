@@ -1,14 +1,21 @@
 # 🐍 POO | SOLID | Python 🐍
 
 Este repositorio contiene una colección de ejercicios y proyectos de Python organizados en diferentes categorías. Cada sección aborda un aspecto específico del lenguaje Python, desde los fundamentos hasta principios avanzados de diseño de software.
-El código está comentado para un entendimiento más sencillo de los pilares de la programación.
 
 # Contenidos del Repositorio
+## POO (Programación Orientada a Objetos)
+![SOLID](resources/OOP.jpg)
+En esta sección, se exploran los conceptos fundamentales de la programación orientada a objetos en Python.
+
+- **Introducción a POO**: Conceptos básicos y ejemplos iniciales.
+- **Abstracción, Encapsulamiento, Herencia y Polimorfismo**: Ejemplos y ejercicios que ilustran estos principios de POO.
+- **Herencia vs Composición**: Comparación y uso adecuado de herencia y composición en diseño de software.
+
+<iframe src='https://www.xmind.app/embed/2SwRjm/' width='750' height='557' frameborder='0' scrolling='no' allowfullscreen="true"></iframe>
 
 ## Python Fundamentals
 
-![Python Fundamentals](resources/python_basics.webp)
-
+![SOLID](resources/python_basics.webp)
 Esta sección cubre los fundamentos del lenguaje Python, ideal para principiantes y para repasar conceptos básicos.
 
 - **Operadores y Estructuras de Control**: Uso de operadores y estructuras de control como bucles y condicionales.
@@ -19,16 +26,8 @@ Esta sección cubre los fundamentos del lenguaje Python, ideal para principiante
 - **JSON y XML**: Manipulación de datos en formatos JSON y XML.
 - **Pruebas Unitarias**: Creación de pruebas unitarias para asegurar la calidad del código.
 
-## POO (Programación Orientada a Objetos)
-En esta sección, se exploran los conceptos fundamentales de la programación orientada a objetos en Python.
-
-- **Introducción a POO**: Conceptos básicos y ejemplos iniciales.
-- **Abstracción, Encapsulamiento, Herencia y Polimorfismo**: Ejemplos y ejercicios que ilustran estos principios de POO.
-- **Herencia vs Composición**: Comparación y uso adecuado de herencia y composición en diseño de software.
-
 ## Principios SOLID
 ![SOLID](resources/solid.png)
-
 Esta sección contiene ejemplos y ejercicios que ilustran los principios SOLID de diseño de software.
 
 - **Responsabilidad Única (SRP)**: Ejemplos de cómo aplicar el principio de responsabilidad única.
@@ -38,8 +37,7 @@ Esta sección contiene ejemplos y ejercicios que ilustran los principios SOLID d
 - **Inversión de Dependencias (DIP)**: Ejercicios que muestran cómo depender de abstracciones en lugar de concreciones.
 
 ## Ejercicios Completos
-Esta carpeta contiene una variedad de ejercicios prácticos que cubren diferentes aspectos de Python.
-Encontrarás ejercicios básicos y algo más complejos donde se dan distintas soliciones a problemas tipo.
+Esta carpeta contiene una variedad de ejercicios prácticos que cubren diferentes aspectos de Python, incluyendo decoradores, funciones lambda, memoización, y más.
 
 ## Cómo Empezar
 
