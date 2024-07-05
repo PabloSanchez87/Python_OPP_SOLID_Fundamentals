@@ -47,7 +47,7 @@ Esta sección contiene ejemplos y ejercicios que ilustran los principios SOLID d
 - **Inversión de Dependencias (DIP)**: Ejercicios que muestran cómo depender de abstracciones en lugar de concreciones.
 
 ## Ejercicios Completos
-Esta carpeta contiene una variedad de ejercicios prácticos que cubren diferentes aspectos de Python, incluido la resolucoión de ejercicios típicos de pruebas técnicas.
+Esta carpeta contiene una variedad de ejercicios prácticos que cubren diferentes aspectos de Python, incluido la resolución de ejercicios típicos de pruebas técnicas.
 
 ## Cómo Empezar
 
