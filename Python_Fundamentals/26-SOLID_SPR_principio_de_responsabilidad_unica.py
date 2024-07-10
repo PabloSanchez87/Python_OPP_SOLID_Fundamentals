@@ -129,6 +129,8 @@ class Library:
     
 # Correcto
 
+# Responsabilidad: Representar un libro con sus atributos.
+# Comentario: Encapsula la información de un libro y no realiza ninguna otra operación.
 class Book:
     def __init__(self, title, author, copies):
         """
@@ -143,6 +145,8 @@ class Book:
         self.copies = copies
         
         
+# Responsabilidad: Representar un usuario con sus atributos.
+# Comentario: Encapsula la información de un usuario y no realiza ninguna otra operación.    
 class Users:
     def __init__(self, nombre, id, email):
         """
@@ -156,7 +160,10 @@ class Users:
         self.id = id
         self.email = email
         
-        
+      
+# Responsabilidad: Gestionar los préstamos de libros.
+# Comentario: Contiene la lógica para prestar y devolver libros. No gestiona directamente los 
+#     datos de los libros o usuarios fuera del contexto de los préstamos.  
 class Loan:
     def __init__(self) -> None:
         """
@@ -193,7 +200,12 @@ class Loan:
                 return True
         return False
 
-
+# Responsabilidad: Gestionar la colección de libros y usuarios, y coordinar los préstamos 
+#     utilizando el servicio de préstamos (Loan).
+# Comentario: Administra la colección de libros y usuarios, y delega la lógica de préstamos 
+#     a la clase Loan. 
+#     Esto sigue el SRP ya que la clase Library no se encarga de los detalles de cómo se prestan 
+#         y devuelven los libros, sino que coordina las acciones utilizando otras clases.
 class Library:
     def __init__(self) -> None:
         """
@@ -265,6 +277,13 @@ class Library:
         
         return False
 
+
+""" 
+Clase Book y Users tienen responsabilidades claras y únicas.
+Clase Loan maneja exclusivamente la lógica de préstamos y devoluciones.
+Clase Library coordina la gestión de libros, usuarios y la lógica de préstamos sin involucrarse 
+    en los detalles de la implementación de los préstamos.
+"""
 
     
 
