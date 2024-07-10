@@ -169,4 +169,7 @@ La clase Calculator está abierta para la extensión porque podemos añadir nuev
     
 La clase Calculator está cerrada para la modificación porque no necesitamos cambiar 
     su código interno para añadir nuevas operaciones.
+    
+Esto se logra gracias al uso de la interfaz Operation y el método add_operation en Calculator, 
+lo que permite registrar nuevas operaciones de manera flexible y modular.    
 """
