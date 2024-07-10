@@ -75,7 +75,6 @@ class EmailService:
                             ###############
                             ##   EXTRA   ##
                             ###############
-#  * DIFICULTAD EXTRA (opcional):
 #  * Desarrolla un sistema de gestión para una biblioteca. El sistema necesita
 #  * manejar diferentes aspectos como el registro de libros, la gestión de usuarios
 #  * y el procesamiento de préstamos de libros.
