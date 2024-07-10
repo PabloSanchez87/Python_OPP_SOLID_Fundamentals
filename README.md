@@ -24,16 +24,6 @@ En esta sección, se exploran los conceptos fundamentales de la programación or
 - **Abstracción, Encapsulamiento, Herencia y Polimorfismo**: Ejemplos y ejercicios que ilustran estos principios de POO.
 - **Herencia vs Composición**: Comparación y uso adecuado de herencia y composición en diseño de software.
 
-[Gráfico de los conceptos básicos OOP](https://xmind.app/embed/2SwRjm/)
-
-## POO (Programación Orientada a Objetos)
-![SOLID](resources/OOP.jpg)
-En esta sección, se exploran los conceptos fundamentales de la programación orientada a objetos en Python.
-
-- **Introducción a POO**: Conceptos básicos y ejemplos iniciales.
-- **Abstracción, Encapsulamiento, Herencia y Polimorfismo**: Ejemplos y ejercicios que ilustran estos principios de POO.
-- **Herencia vs Composición**: Comparación y uso adecuado de herencia y composición en diseño de software.
-
 [Gráfico Programación orientada a Objetos](https://www.xmind.app/embed/2SwRjm/)
 
 ## Principios SOLID
